@@ -32,11 +32,7 @@ test:
   host: localhost
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  <<: *mysql
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
   database: recorder_production
-  pool: 5
-  username: root
-  password: 
-  host: localhost
