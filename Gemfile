@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.3.3'
+ruby '2.4.0'
 
 gem 'rails', '~> 5.0.1'
 
@@ -58,4 +58,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
