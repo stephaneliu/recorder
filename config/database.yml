@@ -29,6 +29,8 @@ test:
 
 production:
   <<: *mysql
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
   pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
-  database: recorder_production
+  database: mcg_production
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
