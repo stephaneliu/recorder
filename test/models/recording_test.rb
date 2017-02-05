@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class RecordingTest < ActiveSupport::TestCase
-  test 'presnece validation' do
+  test 'presence validation' do
     recording = Recording.new
     recording.valid?
 
