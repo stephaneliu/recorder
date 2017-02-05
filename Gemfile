@@ -25,6 +25,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
+  gem 'annotate'
   gem 'better_errors'
   gem 'foreman'
   gem 'guard-bundler'
