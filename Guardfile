@@ -30,9 +30,11 @@ end
 guard :minitest, spring: "bin/rails test" do
   # with Minitest::Unit
   watch(%r{^test/(.*)\/*_test.rb$})
-  watch(%r{^lib/(.*/)?([^/]+)\.rb$})     { |m| "test/#{m[1]}test_#{m[2]}.rb" }
-  watch(%r{^test/test_helper\.rb$})      { 'test' }
-
+  watch(%r{^lib/(.*/)?([^/]+)\.rb$})     									{ |m| "test/#{m[1]}test_#{m[2]}.rb" }
+  watch(%r{^test/test_helper\.rb$})      									{ 'test' }
+  watch(%r{^app/controllers/application_controller\.rb$}) { 'test/controllers' }
+  watch(%r{^app/controllers/(.+)_controller\.rb$})        { |m| "test/controllers/#{m[1]}_controller_test.rb" }
+  watch(%r{^app/views/(.+)_mailer/.+})                    { |m| "test/mailers/#{m[1]}_mailer_test.rb" }
   # with Minitest::Spec
   # watch(%r{^spec/(.*)_spec\.rb$})
   # watch(%r{^lib/(.+)\.rb$})         { |m| "spec/#{m[1]}_spec.rb" }
