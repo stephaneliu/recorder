@@ -1,0 +1,8 @@
+one:
+  date: <%= Date.today %>
+  start_time: <%= 3.hours.ago.utc.to_s(:db) %>
+  end_time: <%= 1.hour.ago.utc.to_s(:db) %>
+two:
+  date: <%= 1.day.ago %>
+  start_time: <%= 6.hours.ago.utc.to_s(:db) %>
+  end_time: <%= 1.hour.ago.utc.to_s(:db) %>
