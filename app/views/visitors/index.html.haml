@@ -4,6 +4,23 @@
     .col-lg-12.text-center
       %h1 Uptime
       %p.lead
+        May 2017
+  .row
+    .col-lg-12.text-center
+      = column_chart [['1', 12], [2, 19], [3, 24], [4, 20], [5, 19], ['S6', 2],
+        ['S7', 0], ['8', 19], ['9', 19], [10, 0], [11, 14], [12, 21.5], ['S13', 4],
+        ['S14', 0], ['15', 11], ['16', 0.75], [17, 19], [18, 18.5], [19, 12], ['S20', 0],
+        ['S21', 0], ['22', 9], ['23', 0], [24, 14.5], [25, 17], [26, 7], ['S27', 15],
+        ['S28', 0], ['29', 0], ['30', 17], [31, 10]],
+                      label: 'duration',
+                      min: 0,
+                      max: 24,
+                      xtitle: "Day",
+                      ytitle: "Duration (Hours)"
+  .row
+    .col-lg-12.text-center
+      %h1 Uptime
+      %p.lead
         April 2017
   .row
     .col-lg-12.text-center
